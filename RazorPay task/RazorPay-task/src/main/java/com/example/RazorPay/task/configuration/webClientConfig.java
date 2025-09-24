@@ -11,8 +11,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class webClientConfig {
 
 
-    private final String keyId = "rzp_test_RIauAdL18LK4NZ";
-    private final String keySecret="f8eiyYdiS3tRu1dhN9R4LIMh";
+    private final String keyId = "your_key_id";
+    private final String keySecret="ypur_key_secret";
 
     @Bean
     public WebClient razorPayWebClient() {
@@ -21,4 +21,5 @@ public class webClientConfig {
                 .defaultHeaders(headers -> headers.setBasicAuth(keyId, keySecret))
                 .build();
     }
+
 }
